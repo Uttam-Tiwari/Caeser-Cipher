@@ -62,48 +62,48 @@ while not Flag:
 USING ONLY ONE FUNCTION FOR BOTH ENCRYPTION AND DECRYPTION
 
 """
-# alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
-#              'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
-#              'u', 'v', 'w', 'x', 'y', 'z']
+alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
+             'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
+             'u', 'v', 'w', 'x', 'y', 'z']
 
-# def dencrypt(direction,message,key):
-#     encryt_message = ""
-#     decrypt_message = ""
-#     if direction == 'encrypt':
-#         for char in message:
-#             if char in alphabets:
-#                 char_index = alphabets.index(char)
-#                 enc_index = (char_index + user_key) % 26
-#                 encryt_message += alphabets[enc_index]
-#             else:
-#                 encryt_message += char
-#         print("Encrypt Message:",encryt_message)
-#     elif direction == 'decrypt':
-#         for char in message:
-#             if char in alphabets:
-#                 char_index = alphabets.index(char)
-#                 dec_index = (char_index - user_key) % 26
-#                 decrypt_message += alphabets[dec_index]
-#             else:
-#                 decrypt_message += char
-#         print("Decrypt Message:",decrypt_message)
+def dencrypt(direction,message,key):
+    encryt_message = ""
+    decrypt_message = ""
+    if direction == 'encrypt':
+        for char in message:
+            if char in alphabets:
+                char_index = alphabets.index(char)
+                enc_index = (char_index + user_key) % 26
+                encryt_message += alphabets[enc_index]
+            else:
+                encryt_message += char
+        print("Encrypt Message:",encryt_message)
+    elif direction == 'decrypt':
+        for char in message:
+            if char in alphabets:
+                char_index = alphabets.index(char)
+                dec_index = (char_index - user_key) % 26
+                decrypt_message += alphabets[dec_index]
+            else:
+                decrypt_message += char
+        print("Decrypt Message:",decrypt_message)
 
 
-# Flag = False
-# while not Flag:
-#     what_to_do = input('Type \'encrypt\' for encryption and \'decrypt\' for decryption:\n')
+Flag = False
+while not Flag:
+    what_to_do = input('Type \'encrypt\' for encryption and \'decrypt\' for decryption:\n')
 
-#     user_msg = input("Enter your message:\n").lower()
+    user_msg = input("Enter your message:\n").lower()
 
-#     user_key = int(input("Enter the key:\n"))
+    user_key = int(input("Enter the key:\n"))
 
-#     dencrypt(direction=what_to_do,message=user_msg,key=user_key)
+    dencrypt(direction=what_to_do,message=user_msg,key=user_key)
 
-#     again_msg = input("Type 'yes' to continue and 'no' to exit:\n")
+    again_msg = input("Type 'yes' to continue and 'no' to exit:\n")
 
-#     if again_msg == 'no' or again_msg == 'No':
-#         Flag = True
-#         print("Goodbye,Have a nice day!")
+    if again_msg == 'no' or again_msg == 'No':
+        Flag = True
+        print("Goodbye,Have a nice day!")
 
 
 
